@@ -15,7 +15,7 @@
 
 + (NSString *)defaultStoreName
 {
-    NSString *defaultName = [[NSBundle mainBundle] bundleIdentifier];
+    NSString *defaultName = [[[NSBundle mainBundle] infoDictionary] valueForKey:(NSString *)kCFBundleNameKey];
 
     if (defaultName == nil)
     {
